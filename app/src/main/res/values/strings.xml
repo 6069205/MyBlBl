@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">ghx</string>
+
+    <!--home-->
+    <string name="home_menu_game_center">游戏中心</string>
+    <string name="home_menu_offline_cache">离线缓存</string>
+    <string name="home_menu_search">搜索</string>
+
+    <string name="home_tab_live">直播</string>
+    <string name="home_tab_recommend">推荐</string>
+    <string name="home_tab_follow_play">追番</string>
+    <string name="home_tab_special_column">专栏</string>
+
 </resources>

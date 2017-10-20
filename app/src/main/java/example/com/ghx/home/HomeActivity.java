@@ -16,6 +16,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import example.com.ghx.BaseActivity;
+import example.com.ghx.BaseFragment;
 import example.com.ghx.R;
 
 /**
@@ -31,22 +32,25 @@ public class HomeActivity extends BaseActivity {
     TabLayout tabLayout;
 
     private HomePagerAdapter mPagerAdapter;
-    private List<Fragment> mFragmentList;
+    private List<BaseFragment> mFragmentList;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
-        this.setSupportActionBar(toolbar);
 
+        toolbar.setTitle("");
+        this.setSupportActionBar(toolbar);
         toolbar.setOnMenuItemClickListener(mOnMenuItemClickListener);
 
-        mFragmentList =new ArrayList<>(3);
-        mFragmentList.add(new FragmentOne());
-        mFragmentList.add(new FragmentOne());
-        mFragmentList.add(new FragmentOne());
-        mPagerAdapter=new HomePagerAdapter(getSupportFragmentManager(),mFragmentList);
+        mFragmentList =new ArrayList<>(4);
+        mFragmentList.add(new LiveFragment());
+        mFragmentList.add(new RecommendFragment());
+        mFragmentList.add(new FollowPlayFragment());
+        mFragmentList.add(new SpecialColumnFragment());
+        mPagerAdapter=new HomePagerAdapter(getApplicationContext()
+                ,getSupportFragmentManager(),mFragmentList);
         viewpager.setAdapter(mPagerAdapter);
 
         tabLayout.setupWithViewPager(viewpager);

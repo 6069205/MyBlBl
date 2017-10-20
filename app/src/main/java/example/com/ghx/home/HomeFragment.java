@@ -1,5 +1,7 @@
 package example.com.ghx.home;
 
+import android.content.Context;
+
 import example.com.ghx.BaseFragment;
 
 /**
@@ -8,4 +10,8 @@ import example.com.ghx.BaseFragment;
 
 public class HomeFragment extends BaseFragment{
 
+    @Override
+    public String getTabName(Context context) {
+        return null;
+    }
 }

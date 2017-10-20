@@ -73,16 +73,29 @@
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:title="标题"
-                app:subtitle="副标题"
+                android:layout_height="@dimen/toolbar_height"
+                android:title="@null"
+                app:contentInsetStart="0dp"
                 app:layout_scrollFlags="scroll|enterAlways">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0.5dp"
+                    android:src="@drawable/ic_drawer_home" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_user_default" />
             </android.support.v7.widget.Toolbar>
 
             <android.support.design.widget.TabLayout
                 android:id="@+id/tab_layout"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="@dimen/tablayout_height"
                 app:tabMode="fixed"
                 app:layout_scrollFlags="enterAlways">
 
