@@ -1,4 +1,4 @@
-package example.com.ghx.home;
+package example.com.ghx.mainpart.home;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -11,11 +11,11 @@ import example.com.ghx.BaseFragment;
 import example.com.ghx.R;
 
 /**
- * 首页直播Fragment
- * Created by gaohx on 2017/10/19.
+ * 首页专栏Fragment
+ * Created by gaohx on 2017/10/20.
  */
 
-public class LiveFragment extends BaseFragment{
+public class SpecialColumnFragment extends BaseFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container
@@ -27,6 +27,6 @@ public class LiveFragment extends BaseFragment{
 
     @Override
     public String getTabName(Context context) {
-        return context.getResources().getString(R.string.home_tab_live);
+        return context.getResources().getString(R.string.home_tab_special_column);
     }
 }

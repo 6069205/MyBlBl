@@ -18,5 +18,5 @@
         android:layout_marginLeft="@dimen/default_margin"
         android:textColor="@color/white"
         android:textSize="@dimen/default_text_size"
-        android:text="@string/home_drawer_not_login_hint"/>
+        android:text="@string/home_drawer_header_not_login_hint"/>
 </LinearLayout>

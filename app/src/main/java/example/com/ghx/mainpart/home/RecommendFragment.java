@@ -1,4 +1,4 @@
-package example.com.ghx.home;
+package example.com.ghx.mainpart.home;
 
 import android.content.Context;
 import android.os.Bundle;

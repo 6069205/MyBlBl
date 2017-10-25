@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/test1"
+        android:icon="@drawable/ic_menu_game_center"
+        android:title="测试1"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/test2"
+        android:icon="@drawable/ic_menu_game_center"
+        android:title="测试2"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/test3"
+        android:icon="@drawable/ic_menu_game_center"
+        android:title="测试3"
+        app:showAsAction="always"/>
+</menu>

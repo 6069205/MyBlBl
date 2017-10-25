@@ -1,4 +1,4 @@
-package example.com.ghx.home;
+package example.com.ghx.mainpart.home;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -25,6 +25,7 @@ import example.com.ghx.BaseFragment;
 import example.com.ghx.R;
 
 /**
+ * 首页Fragment
  * Created by gaohx on 2017/10/17.
  */
 
@@ -38,7 +39,22 @@ public class HomeFragment extends BaseFragment {
     Unbinder unbinder;
 
     private HomePagerAdapter mPagerAdapter;
+    /**
+     * ViewPager中的所有fragment
+     */
     private List<BaseFragment> mFragmentList;
+
+    /**
+     * 获取实例
+     * @return
+     */
+    public static HomeFragment newInstance() {
+        Bundle args = new Bundle();
+
+        HomeFragment fragment = new HomeFragment();
+        fragment.setArguments(args);
+        return fragment;
+    }
 
     @Nullable
     @Override
@@ -53,7 +69,6 @@ public class HomeFragment extends BaseFragment {
         setHasOptionsMenu(true);
         mToolbar.setTitle("");
         ((AppCompatActivity)mActivity).setSupportActionBar(mToolbar);
-        mToolbar.setOnMenuItemClickListener(mOnMenuItemClickListener);
 
         mFragmentList = new ArrayList<>(4);
         mFragmentList.add(new LiveFragment());
@@ -83,13 +98,9 @@ public class HomeFragment extends BaseFragment {
         inflater.inflate(R.menu.home, menu);
     }
 
-    private Toolbar.OnMenuItemClickListener mOnMenuItemClickListener = new Toolbar.OnMenuItemClickListener() {
-        @Override
-        public boolean onMenuItemClick(MenuItem item) {
-            Log.d("11111111", "ghxa");
-            return false;
-        }
-    };
-
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Log.d("菜单点击", "ghxa");
+        return super.onOptionsItemSelected(item);
+    }
 }
