@@ -2,19 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_game_center"
+        android:id="@+id/action_home_game_center"
         android:icon="@drawable/ic_menu_game_center"
         android:title="@string/home_menu_game_center"
         app:showAsAction="always"/>
 
     <item
-        android:id="@+id/action_offline_cache"
+        android:id="@+id/action_home_offline_cache"
         android:icon="@drawable/ic_menu_offline_cache"
         android:title="@string/home_menu_offline_cache"
         app:showAsAction="always"/>
 
     <item
-        android:id="@+id/action_search"
+        android:id="@+id/action_home_search"
         android:icon="@drawable/ic_menu_search"
         android:title="@string/home_menu_search"
         app:showAsAction="always"/>

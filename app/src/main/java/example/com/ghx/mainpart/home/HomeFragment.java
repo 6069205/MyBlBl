@@ -61,20 +61,23 @@ public class HomeFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         unbinder = ButterKnife.bind(this, view);
+
+        mToolbar.setTitle("");
         return view;
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view,savedInstanceState);
         setHasOptionsMenu(true);
         mToolbar.setTitle("");
         ((AppCompatActivity)mActivity).setSupportActionBar(mToolbar);
 
         mFragmentList = new ArrayList<>(4);
-        mFragmentList.add(new LiveFragment());
-        mFragmentList.add(new RecommendFragment());
-        mFragmentList.add(new FollowPlayFragment());
-        mFragmentList.add(new SpecialColumnFragment());
+        mFragmentList.add(new ChildLiveFragment());
+        mFragmentList.add(new ChildRecommendFragment());
+        mFragmentList.add(new ChildFollowPlayFragment());
+        mFragmentList.add(new ChildSpecialColumnFragment());
         mPagerAdapter = new HomePagerAdapter(mActivity
                 , getChildFragmentManager(), mFragmentList);
         mViewpager.setAdapter(mPagerAdapter);
@@ -91,6 +94,12 @@ public class HomeFragment extends BaseFragment {
     @Override
     public String getTabName(Context context) {
         return null;
+    }
+
+    @Nullable
+    @Override
+    protected Toolbar getToolBar() {
+        return mToolbar;
     }
 
     @Override

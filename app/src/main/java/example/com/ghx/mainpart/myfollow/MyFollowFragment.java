@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -50,6 +51,7 @@ public class MyFollowFragment extends BaseFragment {
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view,savedInstanceState);
         setHasOptionsMenu(true);
         mToolbar.setTitle("");
         ((AppCompatActivity)mActivity).setSupportActionBar(mToolbar);
@@ -64,6 +66,12 @@ public class MyFollowFragment extends BaseFragment {
     @Override
     public String getTabName(Context context) {
         return null;
+    }
+
+    @Nullable
+    @Override
+    protected Toolbar getToolBar() {
+        return mToolbar;
     }
 
     @Override
