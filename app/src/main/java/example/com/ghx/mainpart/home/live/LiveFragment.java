@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import example.com.ghx.BaseFragment;
+import example.com.ghx.BaseViewPagerFragment;
 import example.com.ghx.R;
 
 /**
@@ -16,7 +17,7 @@ import example.com.ghx.R;
  * Created by gaohx on 2017/10/19.
  */
 
-public class LiveFragment extends BaseFragment{
+public class LiveFragment extends BaseViewPagerFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container
@@ -35,5 +36,10 @@ public class LiveFragment extends BaseFragment{
     @Override
     protected Toolbar getToolBar() {
         return null;
+    }
+
+    @Override
+    protected void lazyLoad() {
+
     }
 }

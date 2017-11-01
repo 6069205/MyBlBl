@@ -23,6 +23,10 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import example.com.ghx.BaseFragment;
 import example.com.ghx.R;
+import example.com.ghx.mainpart.home.followplay.FollowPlayFragment;
+import example.com.ghx.mainpart.home.live.LiveFragment;
+import example.com.ghx.mainpart.home.recommend.RecommendFragment;
+import example.com.ghx.mainpart.home.specailcolumn.SpecialColumnFragment;
 
 /**
  * 首页Fragment
@@ -74,10 +78,10 @@ public class HomeFragment extends BaseFragment {
         ((AppCompatActivity)mActivity).setSupportActionBar(mToolbar);
 
         mFragmentList = new ArrayList<>(4);
-        mFragmentList.add(new ChildLiveFragment());
-        mFragmentList.add(new ChildRecommendFragment());
-        mFragmentList.add(new ChildFollowPlayFragment());
-        mFragmentList.add(new ChildSpecialColumnFragment());
+        mFragmentList.add(new LiveFragment());
+        mFragmentList.add(new RecommendFragment());
+        mFragmentList.add(new FollowPlayFragment());
+        mFragmentList.add(new SpecialColumnFragment());
         mPagerAdapter = new HomePagerAdapter(mActivity
                 , getChildFragmentManager(), mFragmentList);
         mViewpager.setAdapter(mPagerAdapter);
