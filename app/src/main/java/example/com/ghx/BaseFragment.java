@@ -47,14 +47,6 @@ public abstract class BaseFragment extends Fragment{
     }
 
     /**
-     * 获取Fragment对应的名称<br/>
-     * (Fragment联合ViewPager、联合TabLayout时，作为Tab名称使用)<br/>
-     * @param context
-     * @return
-     */
-    public abstract String getTabName(Context context);
-
-    /**
      * 返回Fragment页面的ToolBar
      * @return
      */

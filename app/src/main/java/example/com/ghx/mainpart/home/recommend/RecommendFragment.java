@@ -33,12 +33,6 @@ public class RecommendFragment extends BaseViewPagerFragment {
         return context.getResources().getString(R.string.home_tab_recommend);
     }
 
-    @Nullable
-    @Override
-    protected Toolbar getToolBar() {
-        return null;
-    }
-
     @Override
     protected void lazyLoad() {
 

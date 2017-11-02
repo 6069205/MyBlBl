@@ -32,12 +32,6 @@ public class SpecialColumnFragment extends BaseViewPagerFragment {
         return context.getResources().getString(R.string.home_tab_special_column);
     }
 
-    @Nullable
-    @Override
-    protected Toolbar getToolBar() {
-        return null;
-    }
-
     @Override
     protected void lazyLoad() {
 

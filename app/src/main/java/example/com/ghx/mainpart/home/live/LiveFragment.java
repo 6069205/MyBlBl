@@ -32,12 +32,6 @@ public class LiveFragment extends BaseViewPagerFragment {
         return context.getResources().getString(R.string.home_tab_live);
     }
 
-    @Nullable
-    @Override
-    protected Toolbar getToolBar() {
-        return null;
-    }
-
     @Override
     protected void lazyLoad() {
 

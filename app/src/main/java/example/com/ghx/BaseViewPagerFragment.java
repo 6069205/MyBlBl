@@ -1,10 +1,38 @@
 package example.com.ghx;
 
+import android.app.Activity;
+import android.content.Context;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+
 /**
+ * ViewPager中使用的Fragment
  * Created by gaohx on 2017/11/1.
  */
 
-public abstract class BaseViewPagerFragment extends BaseFragment{
+public abstract class BaseViewPagerFragment extends Fragment {
+//    /**
+//     * 类名作为TAG
+//     */
+//    public String TAG;
+    protected Activity mActivity;
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mActivity=getActivity();
+//        TAG =getClass().getName();
+    }
+
+    /**
+     * 获取Fragment对应的名称<br/>
+     * (Fragment联合ViewPager、联合TabLayout时，作为Tab名称使用)<br/>
+     * @param context
+     * @return
+     */
+    public abstract String getTabName(Context context);
+
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {//对应getUserVisibleHint可以获取
         super.setUserVisibleHint(isVisibleToUser);

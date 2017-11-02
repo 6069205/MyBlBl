@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import example.com.ghx.BaseFragment;
+import example.com.ghx.BaseViewPagerFragment;
 
 /**
  * 主页ViewPager适配器
@@ -18,9 +19,9 @@ import example.com.ghx.BaseFragment;
 public class HomePagerAdapter extends FragmentPagerAdapter{
 
     private Context mContext;
-    private List<BaseFragment> mList;
+    private List<BaseViewPagerFragment> mList;
 
-    public HomePagerAdapter(Context context, FragmentManager fm, List<BaseFragment> list) {
+    public HomePagerAdapter(Context context, FragmentManager fm, List<BaseViewPagerFragment> list) {
         super(fm);
         mContext=context;
         mList=list;

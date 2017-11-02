@@ -22,6 +22,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import example.com.ghx.BaseFragment;
+import example.com.ghx.BaseViewPagerFragment;
 import example.com.ghx.R;
 import example.com.ghx.mainpart.home.followplay.FollowPlayFragment;
 import example.com.ghx.mainpart.home.live.LiveFragment;
@@ -46,7 +47,7 @@ public class HomeFragment extends BaseFragment {
     /**
      * ViewPager中的所有fragment
      */
-    private List<BaseFragment> mFragmentList;
+    private List<BaseViewPagerFragment> mFragmentList;
 
     /**
      * 获取实例
@@ -93,11 +94,6 @@ public class HomeFragment extends BaseFragment {
     public void onDestroyView() {
         super.onDestroyView();
         unbinder.unbind();
-    }
-
-    @Override
-    public String getTabName(Context context) {
-        return null;
     }
 
     @Nullable

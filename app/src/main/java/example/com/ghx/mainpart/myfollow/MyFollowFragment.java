@@ -63,11 +63,6 @@ public class MyFollowFragment extends BaseFragment {
         unbinder.unbind();
     }
 
-    @Override
-    public String getTabName(Context context) {
-        return null;
-    }
-
     @Nullable
     @Override
     protected Toolbar getToolBar() {
