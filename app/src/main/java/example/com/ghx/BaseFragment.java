@@ -34,6 +34,7 @@ public abstract class BaseFragment extends Fragment{
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        //TODO 之后在父类方法这里添加support包中的注解，让子类必须调用父类这个方法
         mTb=getToolBar();
     }
 

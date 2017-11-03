@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import example.com.ghx.BaseFragment;
+import example.com.ghx.BaseViewPagerFragment;
 import example.com.ghx.R;
 
 /**
@@ -16,7 +17,7 @@ import example.com.ghx.R;
  * Created by gaohx on 2017/10/20.
  */
 
-public class FollowPlayFragment extends BaseFragment {
+public class FollowPlayFragment extends BaseViewPagerFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container
@@ -31,9 +32,8 @@ public class FollowPlayFragment extends BaseFragment {
         return context.getResources().getString(R.string.home_tab_follow_play);
     }
 
-    @Nullable
     @Override
-    protected Toolbar getToolBar() {
-        return null;
+    protected void lazyLoad() {
+
     }
 }
