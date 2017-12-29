@@ -20,9 +20,10 @@ import example.com.ghx.mainpart.home.HomeFragment;
 import example.com.ghx.mainpart.myfollow.MyFollowFragment;
 
 /**
- * Created by gaohx on 2017/10/17.
+ *
+ * @author gaohx
+ * @date 2017/12/19
  */
-
 public class MainPartActivity extends BaseActivity {
     @BindView(R.id.navigation_view)
     NavigationView mNavigationView;

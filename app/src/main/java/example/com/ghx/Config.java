@@ -2,12 +2,14 @@ package example.com.ghx;
 
 /**
  * 基本配置信息
- * Created by gaohx on 2017/10/30.
+ * @author gaohx
+ * @date 2017/12/19
  */
-
 public class Config {
-    // 发送请求的基础Url<br/>
-    // 由于没有官方API，所以这里很多个rl，具体每个url查什么，看Retrofit的Service
+    /*发送请求的基础Url<br/>
+      由于没有官方API，所以这里很多个url，具体每个url查什么，看Retrofit的Service
+     */
+    /***/
     public static final String BILI_GO_BASE_URL = "http://bilibili-service.daoapp.io/";
     public static final String RANK_BASE_URL = "http://www.bilibili.com/";
     public static final String APP_BASE_URL = "http://app.bilibili.com/";

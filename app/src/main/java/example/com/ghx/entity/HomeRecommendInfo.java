@@ -4,9 +4,9 @@ import java.util.List;
 
 /**
  * 首页推荐信息
- * Created by gaohx on 2017/10/30.
+ * @author gaohx
+ * @date 2017/12/19
  */
-
 public class HomeRecommendInfo {
     /**
      * code : 0

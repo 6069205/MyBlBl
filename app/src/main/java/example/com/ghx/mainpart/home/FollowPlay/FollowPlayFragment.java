@@ -14,9 +14,9 @@ import example.com.ghx.R;
 
 /**
  * 首页追番Fragment
- * Created by gaohx on 2017/10/20.
+ * @author gaohx
+ * @date 2017/12/19
  */
-
 public class FollowPlayFragment extends BaseViewPagerFragment {
     @Nullable
     @Override

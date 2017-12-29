@@ -7,22 +7,22 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 
 /**
- * ViewPager中使用的Fragment
- * Created by gaohx on 2017/11/1.
+ * ViewPager中使用的Fragment基类
+ * @author gaohx
+ * @date 2017/12/19
  */
-
 public abstract class BaseViewPagerFragment extends Fragment {
 //    /**
 //     * 类名作为TAG
 //     */
 //    public String TAG;
+
     protected Activity mActivity;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mActivity=getActivity();
-//        TAG =getClass().getName();
     }
 
     /**

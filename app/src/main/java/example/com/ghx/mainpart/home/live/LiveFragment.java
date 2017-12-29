@@ -14,9 +14,9 @@ import example.com.ghx.R;
 
 /**
  * 首页直播Fragment
- * Created by gaohx on 2017/10/19.
+ * @author gaohx
+ * @date 2017/12/19
  */
-
 public class LiveFragment extends BaseViewPagerFragment {
     @Nullable
     @Override

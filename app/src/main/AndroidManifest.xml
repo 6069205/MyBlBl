@@ -3,7 +3,6 @@
     package="example.com.ghx">
     <!--android:sharedUserId="ghx.haha"-->
 
-    <uses-sdk android:minSdkVersion="8"></uses-sdk>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -15,7 +14,7 @@
     <!--<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />-->
 
     <application
-        android:name=".MyApplication"
+        android:name=".application.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"

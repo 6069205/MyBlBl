@@ -1,11 +1,13 @@
-package example.com.ghx;
+package example.com.ghx.application;
 import android.content.Context;
 import android.util.Log;
 
 import com.umeng.analytics.MobclickAgent;
 
 /**
- * Created by gnnt on 2017/8/21.
+ *
+ * @author gaohx
+ * @date 2017/12/19
  */
 
 public class CrashHandler implements Thread.UncaughtExceptionHandler {
@@ -56,7 +58,7 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
             handleException(throwable);
 //            mDefaultHandler.uncaughtException(thread,throwable);
         }
-        //处理完未捕获的异常之后--这里是直接杀死进程
+        //处理完未捕获的异常之后,这里是直接杀死进程
         MobclickAgent.onKillProcess(mContext);
         android.os.Process.killProcess(android.os.Process.myPid());
         System.exit(1);

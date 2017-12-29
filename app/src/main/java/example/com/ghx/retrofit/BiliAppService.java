@@ -4,11 +4,11 @@ import example.com.ghx.Config;
 
 /**
  *
- * Created by gaohx on 2017/10/30.
+ * @author gaohx
+ * @date 2017/12/19
  */
-
 public interface BiliAppService {
-    String url= Config.APP_BASE_URL;
+    String URL = Config.APP_BASE_URL;
 
     //TODO
 }

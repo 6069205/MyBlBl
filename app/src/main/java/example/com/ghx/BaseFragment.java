@@ -3,6 +3,7 @@ package example.com.ghx;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.CallSuper;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
@@ -14,14 +15,16 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * Created by gaohx on 2017/10/17.
+ *
+ * @author gaohx
+ * @date 2017/12/19
  */
-
 public abstract class BaseFragment extends Fragment{
 //    /**
 //     * 类名作为TAG
 //     */
 //    public String TAG;
+
     protected Activity mActivity;
     protected Toolbar mTb;
 
@@ -33,8 +36,9 @@ public abstract class BaseFragment extends Fragment{
     }
 
     @Override
+    @CallSuper
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        //TODO 之后在父类方法这里添加support包中的注解，让子类必须调用父类这个方法
+        //TODO 之后在父类方法这里添加support包中的注解，让子类必须调用父类这个方法，已加
         mTb=getToolBar();
     }
 

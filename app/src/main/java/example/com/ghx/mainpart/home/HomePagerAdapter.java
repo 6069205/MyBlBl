@@ -13,9 +13,9 @@ import example.com.ghx.BaseViewPagerFragment;
 
 /**
  * 主页ViewPager适配器
- * Created by gaohx on 2017/10/19.
+ * @author gaohx
+ * @date 2017/12/19
  */
-
 public class HomePagerAdapter extends FragmentPagerAdapter{
 
     private Context mContext;

@@ -31,9 +31,9 @@ import example.com.ghx.mainpart.home.specailcolumn.SpecialColumnFragment;
 
 /**
  * 首页Fragment
- * Created by gaohx on 2017/10/17.
+ * @author gaohx
+ * @date 2017/12/19
  */
-
 public class HomeFragment extends BaseFragment {
     @BindView(R.id.viewpager)
     ViewPager mViewpager;
