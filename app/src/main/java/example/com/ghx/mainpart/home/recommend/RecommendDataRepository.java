@@ -27,6 +27,9 @@ public class RecommendDataRepository {
      */
     private HomeRecommendInfo mHomeRecommendInfo;
 
+
+//    public void set...(){}
+
     /**
      * 从缓存获取推荐信息
      */

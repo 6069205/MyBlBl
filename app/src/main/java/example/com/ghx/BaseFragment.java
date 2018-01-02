@@ -14,6 +14,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import example.com.ghx.application.MyApplication;
+
 /**
  *
  * @author gaohx
@@ -56,4 +58,15 @@ public abstract class BaseFragment extends Fragment{
      * @return
      */
     protected abstract @Nullable Toolbar getToolBar();
+
+    /**
+     * 显示吐司
+     * @param text
+     */
+    public void showToast(String text){
+        if(mActivity.getApplication() instanceof MyApplication){
+            MyApplication app= (MyApplication) mActivity.getApplication();
+            app.showToast(text);
+        }
+    }
 }

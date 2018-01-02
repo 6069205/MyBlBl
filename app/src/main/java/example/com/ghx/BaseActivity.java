@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.umeng.analytics.MobclickAgent;
 
+import example.com.ghx.application.MyApplication;
+
 /**
  *
  * @author gaohx
@@ -29,5 +31,16 @@ public class BaseActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         MobclickAgent.onPause(this);
+    }
+
+    /**
+     * 显示吐司
+     * @param text
+     */
+    public void showToast(String text){
+        if(getApplication() instanceof MyApplication){
+            MyApplication app= (MyApplication) getApplication();
+            app.showToast(text);
+        }
     }
 }

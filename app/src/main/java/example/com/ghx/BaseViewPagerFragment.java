@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 
+import example.com.ghx.application.MyApplication;
+
 /**
  * ViewPager中使用的Fragment基类
  * @author gaohx
@@ -47,4 +49,15 @@ public abstract class BaseViewPagerFragment extends Fragment {
      * (是要请求数据，还是用原来的缓存数据，这个判断，就到子类中看需求来做了)
      */
     protected abstract void lazyLoad();
+
+    /**
+     * 显示吐司
+     * @param text
+     */
+    public void showToast(String text){
+        if(mActivity.getApplication() instanceof MyApplication){
+            MyApplication app= (MyApplication) mActivity.getApplication();
+            app.showToast(text);
+        }
+    }
 }
