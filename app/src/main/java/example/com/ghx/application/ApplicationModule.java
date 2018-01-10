@@ -4,7 +4,6 @@ import android.content.Context;
 import android.widget.Toast;
 
 import javax.inject.Singleton;
-
 import dagger.Module;
 import dagger.Provides;
 
@@ -15,16 +14,22 @@ import dagger.Provides;
  */
 @Module
 public class ApplicationModule {
+
     private Context context;
 
     public ApplicationModule(Context context){
         this.context=context;
     }
 
+    @Provides
+    @Singleton
+    public Context provideContext(){
+        return context;
+    }
 
-//    @Provides
-//    @Singleton
-//    public Toast provideToast(){
-//        return Toast.makeText(context,"",Toast.LENGTH_SHORT);
-//    }
+    @Provides
+    @Singleton
+    public Toast provideToast(){
+        return Toast.makeText(context,"",Toast.LENGTH_SHORT);
+    }
 }

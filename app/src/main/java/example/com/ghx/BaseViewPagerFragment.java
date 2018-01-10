@@ -5,7 +5,11 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.widget.Toast;
 
+import javax.inject.Inject;
+
+import dagger.android.support.DaggerFragment;
 import example.com.ghx.application.MyApplication;
 
 /**
@@ -13,13 +17,15 @@ import example.com.ghx.application.MyApplication;
  * @author gaohx
  * @date 2017/12/19
  */
-public abstract class BaseViewPagerFragment extends Fragment {
+public abstract class BaseViewPagerFragment extends DaggerFragment {
 //    /**
 //     * 类名作为TAG
 //     */
 //    public String TAG;
 
     protected Activity mActivity;
+    @Inject
+    protected Toast mToast;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -55,9 +61,7 @@ public abstract class BaseViewPagerFragment extends Fragment {
      * @param text
      */
     public void showToast(String text){
-        if(mActivity.getApplication() instanceof MyApplication){
-            MyApplication app= (MyApplication) mActivity.getApplication();
-            app.showToast(text);
-        }
+        mToast.setText(text);
+        mToast.show();
     }
 }

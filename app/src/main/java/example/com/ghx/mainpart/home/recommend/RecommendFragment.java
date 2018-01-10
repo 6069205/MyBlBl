@@ -11,17 +11,22 @@ import javax.inject.Inject;
 
 import example.com.ghx.BaseViewPagerFragment;
 import example.com.ghx.R;
+import example.com.ghx.di.FragmentScope;
 
 /**
  * 首页推荐Fragment
  * @author gaohx
  * @date 2017/12/19
  */
+@FragmentScope
 public class RecommendFragment extends BaseViewPagerFragment
         implements RecommendContract.View{
 
+//    @Inject
+//    protected RecommendContract.Presenter mPresenter;
+
     @Inject
-    protected RecommendContract.Presenter mPresenter;
+    public RecommendFragment(){}
 
     @Nullable
     @Override

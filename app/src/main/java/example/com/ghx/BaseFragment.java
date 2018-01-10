@@ -13,7 +13,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import javax.inject.Inject;
+
+import dagger.android.support.DaggerFragment;
 import example.com.ghx.application.MyApplication;
 
 /**
@@ -21,7 +25,7 @@ import example.com.ghx.application.MyApplication;
  * @author gaohx
  * @date 2017/12/19
  */
-public abstract class BaseFragment extends Fragment{
+public abstract class BaseFragment extends DaggerFragment{
 //    /**
 //     * 类名作为TAG
 //     */
@@ -29,6 +33,9 @@ public abstract class BaseFragment extends Fragment{
 
     protected Activity mActivity;
     protected Toolbar mTb;
+
+    @Inject
+    protected Toast mToast;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -64,9 +71,7 @@ public abstract class BaseFragment extends Fragment{
      * @param text
      */
     public void showToast(String text){
-        if(mActivity.getApplication() instanceof MyApplication){
-            MyApplication app= (MyApplication) mActivity.getApplication();
-            app.showToast(text);
-        }
+        mToast.setText(text);
+        mToast.show();
     }
 }

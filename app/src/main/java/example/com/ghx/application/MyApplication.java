@@ -1,6 +1,5 @@
 package example.com.ghx.application;
 
-import android.app.Application;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -10,17 +9,16 @@ import com.umeng.analytics.MobclickAgent;
 import com.umeng.message.IUmengRegisterCallback;
 import com.umeng.message.PushAgent;
 
+import dagger.android.AndroidInjector;
+import dagger.android.support.DaggerApplication;
+
 /**
  *
  * @author gaohx
  * @date 2017/12/19
  */
 
-public class MyApplication extends Application {
-
-    private ApplicationComponent mApplicationComponent;
-
-    private Toast mToast;
+public class MyApplication extends DaggerApplication {
 
     @Override
     public void onCreate() {
@@ -36,18 +34,6 @@ public class MyApplication extends Application {
         initPush();
         //日志框架初始化
         Logger.addLogAdapter(new AndroidLogAdapter());
-
-        mApplicationComponent=DaggerApplicationComponent.builder()
-                .applicationModule(new ApplicationModule(this))
-                .build();
-    }
-
-    /**
-     * 获取ApplicationComponent
-     * @return
-     */
-    public ApplicationComponent getApplicationComponent(){
-        return mApplicationComponent;
     }
 
     /**
@@ -73,16 +59,11 @@ public class MyApplication extends Application {
         PushAgent.getInstance(getBaseContext()).onAppStart();
     }
 
-    /**
-     * 显示吐丝
-     * @param text
-     */
-    public void showToast(String text){
-        if(mToast==null){
-            mToast=Toast.makeText(this,text,Toast.LENGTH_SHORT);
-        }else{
-            mToast.setText(text);
-        }
-        mToast.show();
+    @Override
+    protected AndroidInjector<? extends DaggerApplication> applicationInjector() {
+        return DaggerApplicationComponent
+                .builder()
+                .applicationModule(new ApplicationModule(this))
+                .build();
     }
 }

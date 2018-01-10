@@ -8,16 +8,23 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import javax.inject.Inject;
+
 import example.com.ghx.BaseFragment;
 import example.com.ghx.BaseViewPagerFragment;
 import example.com.ghx.R;
+import example.com.ghx.di.FragmentScope;
 
 /**
  * 首页专栏Fragment
  * Created by gaohx on 2017/10/20.
  */
-
+@FragmentScope
 public class SpecialColumnFragment extends BaseViewPagerFragment {
+
+    @Inject
+    public SpecialColumnFragment(){}
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container

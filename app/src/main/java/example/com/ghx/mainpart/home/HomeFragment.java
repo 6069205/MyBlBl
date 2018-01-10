@@ -18,12 +18,15 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import example.com.ghx.BaseFragment;
 import example.com.ghx.BaseViewPagerFragment;
 import example.com.ghx.R;
+import example.com.ghx.di.ActivityScope;
 import example.com.ghx.mainpart.home.followplay.FollowPlayFragment;
 import example.com.ghx.mainpart.home.live.LiveFragment;
 import example.com.ghx.mainpart.home.recommend.RecommendFragment;
@@ -34,6 +37,7 @@ import example.com.ghx.mainpart.home.specailcolumn.SpecialColumnFragment;
  * @author gaohx
  * @date 2017/12/19
  */
+@ActivityScope
 public class HomeFragment extends BaseFragment {
     @BindView(R.id.viewpager)
     ViewPager mViewpager;
@@ -48,6 +52,9 @@ public class HomeFragment extends BaseFragment {
      * ViewPager中的所有fragment
      */
     private List<BaseViewPagerFragment> mFragmentList;
+
+    @Inject
+    public HomeFragment(){}
 
     /**
      * 获取实例
