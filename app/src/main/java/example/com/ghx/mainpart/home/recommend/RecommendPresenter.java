@@ -1,5 +1,7 @@
 package example.com.ghx.mainpart.home.recommend;
 
+import android.support.annotation.NonNull;
+
 import javax.inject.Inject;
 
 /**
@@ -9,8 +11,12 @@ import javax.inject.Inject;
 
 public class RecommendPresenter implements RecommendContract.Presenter{
 
+    public RecommendDataRepository mDataRepository;
+
     @Inject
-    public RecommendPresenter(){}
+    public RecommendPresenter(@NonNull RecommendDataRepository dataRepository){
+        mDataRepository=dataRepository;
+    }
 
     @Override
     public void getList() {

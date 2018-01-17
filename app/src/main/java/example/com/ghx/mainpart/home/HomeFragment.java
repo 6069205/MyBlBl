@@ -37,7 +37,6 @@ import example.com.ghx.mainpart.home.specailcolumn.SpecialColumnFragment;
  * @author gaohx
  * @date 2017/12/19
  */
-@ActivityScope
 public class HomeFragment extends BaseFragment {
     @BindView(R.id.viewpager)
     ViewPager mViewpager;
@@ -53,7 +52,6 @@ public class HomeFragment extends BaseFragment {
      */
     private List<BaseViewPagerFragment> mFragmentList;
 
-    @Inject
     public HomeFragment(){}
 
     /**

@@ -5,6 +5,7 @@ import dagger.android.ContributesAndroidInjector;
 import example.com.ghx.di.FragmentScope;
 import example.com.ghx.mainpart.home.HomeFragment;
 import example.com.ghx.mainpart.home.HomeFragmentModule;
+import example.com.ghx.mainpart.home.recommend.TestModule;
 import example.com.ghx.mainpart.myfollow.MyFollowFragment;
 
 /**
@@ -12,12 +13,12 @@ import example.com.ghx.mainpart.myfollow.MyFollowFragment;
  * @date 2018/1/10
  */
 @Module
-public interface MainPartActivityModule {
+public abstract class MainPartActivityModule {
     @FragmentScope
     @ContributesAndroidInjector(modules = {HomeFragmentModule.class})
-    HomeFragment homeFragment();
+    abstract HomeFragment homeFragment();
 
     @FragmentScope
     @ContributesAndroidInjector
-    MyFollowFragment myFollowFragment();
+    abstract MyFollowFragment myFollowFragment();
 }

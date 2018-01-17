@@ -1,5 +1,7 @@
 package example.com.ghx.mainpart.home.recommend;
 
+import javax.inject.Inject;
+
 import example.com.ghx.DataCallback;
 import example.com.ghx.entity.HomeRecommendInfo;
 import io.reactivex.Observable;
@@ -26,6 +28,9 @@ public class RecommendDataRepository {
      * 主页推荐信息
      */
     private HomeRecommendInfo mHomeRecommendInfo;
+
+    @Inject
+    public RecommendDataRepository(){}
 
 
 //    public void set...(){}

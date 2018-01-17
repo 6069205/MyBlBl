@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 
 import example.com.ghx.BaseViewPagerFragment;
 import example.com.ghx.R;
@@ -18,14 +19,22 @@ import example.com.ghx.di.FragmentScope;
  * @author gaohx
  * @date 2017/12/19
  */
-@FragmentScope
 public class RecommendFragment extends BaseViewPagerFragment
         implements RecommendContract.View{
 
+//    @Named("SB")
 //    @Inject
 //    protected RecommendContract.Presenter mPresenter;
 
     @Inject
+    protected RecommendPresenter mPresenter;
+
+    @Inject
+    String s;
+
+    @Inject
+    int  i;
+
     public RecommendFragment(){}
 
     @Nullable
@@ -44,8 +53,10 @@ public class RecommendFragment extends BaseViewPagerFragment
 
     @Override
     protected void lazyLoad() {
-        showToast("lazyLoad");
+//        showToast("lazyLoad");
 //        Logger.d("lazyLoad");
+
+        showToast(i+s);
     }
 
     @Override
@@ -55,6 +66,6 @@ public class RecommendFragment extends BaseViewPagerFragment
 
     @Override
     public void showMessage(String message) {
-
+        showToast(message);
     }
 }
