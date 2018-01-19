@@ -21,26 +21,8 @@ import io.reactivex.schedulers.Schedulers;
  */
 public class RecommendDataRepository {
 
-    /*官方的结构有点乱，把3级缓存都单独提出来的话，类又会增加很多，所以我决定这里暂时
-     把3级缓存的实现都写在Repository内。*/
-
-    /**
-     * 主页推荐信息
-     */
-    private HomeRecommendInfo mHomeRecommendInfo;
-
     @Inject
     public RecommendDataRepository(){}
-
-
-//    public void set...(){}
-
-    /**
-     * 从缓存获取推荐信息
-     */
-    public HomeRecommendInfo getRecommendInfoFromCache() {
-        return mHomeRecommendInfo;
-    }
 
     /**
      * 从网络获取推荐信息

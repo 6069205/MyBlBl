@@ -1,8 +1,7 @@
 package example.com.ghx.mainpart.home.recommend;
 
-import android.support.annotation.NonNull;
-
 import javax.inject.Inject;
+import example.com.ghx.entity.HomeRecommendInfo;
 
 /**
  * @author gaohx
@@ -11,11 +10,18 @@ import javax.inject.Inject;
 
 public class RecommendPresenter implements RecommendContract.Presenter{
 
-    public RecommendDataRepository mDataRepository;
+    /**
+     * 主页推荐信息
+     */
+    private HomeRecommendInfo mHomeRecommendInfo;
+
+    RecommendContract.View mView;
 
     @Inject
-    public RecommendPresenter(@NonNull RecommendDataRepository dataRepository){
-        mDataRepository=dataRepository;
+    RecommendDataRepository mDataRepository;
+
+    @Inject
+    public RecommendPresenter(){
     }
 
     @Override
@@ -25,11 +31,11 @@ public class RecommendPresenter implements RecommendContract.Presenter{
 
     @Override
     public void addView(RecommendContract.View view) {
-
+        mView=view;
     }
 
     @Override
     public void removeView() {
-
+        mView=null;
     }
 }

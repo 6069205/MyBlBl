@@ -20,18 +20,8 @@ import example.com.ghx.R;
 public class RecommendFragment extends BaseViewPagerFragment
         implements RecommendContract.View{
 
-//    @Named("SB")
-//    @Inject
-//    protected RecommendContract.Presenter mPresenter;
-
     @Inject
-    protected RecommendPresenter mPresenter;
-
-    @Inject
-    String s;
-
-    @Inject
-    int  i;
+    protected RecommendContract.Presenter mPresenter;
 
     public RecommendFragment(){}
 
@@ -54,7 +44,7 @@ public class RecommendFragment extends BaseViewPagerFragment
 //        showToast("lazyLoad");
 //        Logger.d("lazyLoad");
 
-        showToast(i+s);
+        //TODO 还要参考我的笔记g0-2：懒加载（延迟加载），把这里完善了
     }
 
     @Override
