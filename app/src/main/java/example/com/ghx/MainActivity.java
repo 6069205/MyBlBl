@@ -8,6 +8,7 @@ import android.view.MenuItem;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import example.com.ghx.base.BaseActivity;
 
 public class MainActivity extends BaseActivity {
     @BindView(R.id.toolbar)

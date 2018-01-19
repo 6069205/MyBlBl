@@ -1,4 +1,4 @@
-package example.com.ghx;
+package example.com.ghx.base;
 
 /**
  * @author gaohx

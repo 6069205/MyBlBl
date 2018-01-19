@@ -3,15 +3,13 @@ package example.com.ghx.mainpart.home.live;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import javax.inject.Inject;
 
-import example.com.ghx.BaseFragment;
-import example.com.ghx.BaseViewPagerFragment;
+import example.com.ghx.base.BaseViewPagerFragment;
 import example.com.ghx.R;
 import example.com.ghx.di.FragmentScope;
 

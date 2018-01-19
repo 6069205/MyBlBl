@@ -61,7 +61,7 @@ dependencies {
     //butterknife-黄油刀
     compile 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
-    //dagger2(之后才正式使用，还有android包没加入)
+    //dagger2
     compile 'com.google.dagger:dagger:2.11'
     annotationProcessor 'com.google.dagger:dagger-compiler:2.11'
     compile 'com.google.dagger:dagger-android:2.11'

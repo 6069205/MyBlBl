@@ -1,6 +1,5 @@
 package example.com.ghx.mainpart.home;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -18,15 +17,12 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.inject.Inject;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-import example.com.ghx.BaseFragment;
-import example.com.ghx.BaseViewPagerFragment;
+import example.com.ghx.base.BaseFragment;
+import example.com.ghx.base.BaseViewPagerFragment;
 import example.com.ghx.R;
-import example.com.ghx.di.ActivityScope;
 import example.com.ghx.mainpart.home.followplay.FollowPlayFragment;
 import example.com.ghx.mainpart.home.live.LiveFragment;
 import example.com.ghx.mainpart.home.recommend.RecommendFragment;

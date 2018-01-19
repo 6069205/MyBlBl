@@ -5,7 +5,6 @@ import dagger.android.ContributesAndroidInjector;
 import example.com.ghx.di.FragmentScope;
 import example.com.ghx.mainpart.home.HomeFragment;
 import example.com.ghx.mainpart.home.HomeFragmentModule;
-import example.com.ghx.mainpart.home.recommend.TestModule;
 import example.com.ghx.mainpart.myfollow.MyFollowFragment;
 
 /**

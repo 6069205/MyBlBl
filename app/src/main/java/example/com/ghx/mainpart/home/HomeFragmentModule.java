@@ -1,15 +1,12 @@
 package example.com.ghx.mainpart.home;
 
 import dagger.Module;
-import dagger.Provides;
 import dagger.android.ContributesAndroidInjector;
-import dagger.android.support.AndroidSupportInjectionModule;
 import example.com.ghx.di.SubFragmentScope;
 import example.com.ghx.mainpart.home.followplay.FollowPlayFragment;
 import example.com.ghx.mainpart.home.live.LiveFragment;
 import example.com.ghx.mainpart.home.recommend.RecommendFragment;
 import example.com.ghx.mainpart.home.recommend.RecommendModule;
-import example.com.ghx.mainpart.home.recommend.TestModule;
 import example.com.ghx.mainpart.home.specailcolumn.SpecialColumnFragment;
 
 /**
@@ -27,8 +24,7 @@ public abstract class HomeFragmentModule {
     abstract LiveFragment liveFragment();
 
     @SubFragmentScope
-    @ContributesAndroidInjector(modules = {RecommendModule.class,
-            TestModule.class})
+    @ContributesAndroidInjector(modules = {RecommendModule.class})
     abstract RecommendFragment recommendFragment();
 
     @SubFragmentScope

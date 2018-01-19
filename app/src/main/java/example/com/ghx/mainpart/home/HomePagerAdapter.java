@@ -8,8 +8,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-import example.com.ghx.BaseFragment;
-import example.com.ghx.BaseViewPagerFragment;
+import example.com.ghx.base.BaseViewPagerFragment;
 
 /**
  * 主页ViewPager适配器

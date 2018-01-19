@@ -15,7 +15,7 @@ import javax.inject.Inject;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-import example.com.ghx.BaseFragment;
+import example.com.ghx.base.BaseFragment;
 import example.com.ghx.R;
 import example.com.ghx.di.ActivityScope;
 

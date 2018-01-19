@@ -1,4 +1,4 @@
-package example.com.ghx;
+package example.com.ghx.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

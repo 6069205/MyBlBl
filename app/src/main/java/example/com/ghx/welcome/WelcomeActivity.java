@@ -1,6 +1,6 @@
 package example.com.ghx.welcome;
 
-import example.com.ghx.BaseActivity;
+import example.com.ghx.base.BaseActivity;
 
 /**
  * @author gaohx

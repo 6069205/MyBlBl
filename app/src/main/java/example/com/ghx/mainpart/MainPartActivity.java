@@ -13,8 +13,8 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import example.com.ghx.BaseActivity;
-import example.com.ghx.BaseFragment;
+import example.com.ghx.base.BaseActivity;
+import example.com.ghx.base.BaseFragment;
 import example.com.ghx.R;
 import example.com.ghx.mainpart.home.HomeFragment;
 import example.com.ghx.mainpart.myfollow.MyFollowFragment;

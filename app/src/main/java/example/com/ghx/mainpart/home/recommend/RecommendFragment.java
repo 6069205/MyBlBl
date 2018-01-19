@@ -8,11 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import javax.inject.Inject;
-import javax.inject.Named;
 
-import example.com.ghx.BaseViewPagerFragment;
+import example.com.ghx.base.BaseViewPagerFragment;
 import example.com.ghx.R;
-import example.com.ghx.di.FragmentScope;
 
 /**
  * 首页推荐Fragment

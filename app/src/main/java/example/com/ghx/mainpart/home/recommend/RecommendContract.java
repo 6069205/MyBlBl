@@ -1,7 +1,7 @@
 package example.com.ghx.mainpart.home.recommend;
 
-import example.com.ghx.BasePresenter;
-import example.com.ghx.BaseView;
+import example.com.ghx.base.BasePresenter;
+import example.com.ghx.base.BaseView;
 
 /**
  * @author gaohx
