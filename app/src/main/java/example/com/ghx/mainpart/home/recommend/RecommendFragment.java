@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.orhanobut.logger.Logger;
+
 import javax.inject.Inject;
 
 import example.com.ghx.base.BaseViewPagerFragment;
@@ -40,11 +42,23 @@ public class RecommendFragment extends BaseViewPagerFragment
     }
 
     @Override
-    protected void lazyLoad() {
-//        showToast("lazyLoad");
-//        Logger.d("lazyLoad");
+    protected boolean hasDiskCache() {
+        return false;
+    }
 
-        //TODO 还要参考我的笔记g0-2：懒加载（延迟加载），把这里完善了
+    @Override
+    protected boolean hasMemoryCache() {
+        return false;
+    }
+
+    @Override
+    protected void lazyLoadCacheData() {
+        showToast("有缓存，加载缓存数据");
+    }
+
+    @Override
+    protected void lazyLoadRemoteData() {
+        showToast("无缓存，请求网络数据");
     }
 
     @Override

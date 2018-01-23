@@ -39,7 +39,22 @@ public class FollowPlayFragment extends BaseViewPagerFragment {
     }
 
     @Override
-    protected void lazyLoad() {
+    protected boolean hasDiskCache() {
+        return false;
+    }
+
+    @Override
+    protected boolean hasMemoryCache() {
+        return false;
+    }
+
+    @Override
+    protected void lazyLoadCacheData() {
+
+    }
+
+    @Override
+    protected void lazyLoadRemoteData() {
 
     }
 }
