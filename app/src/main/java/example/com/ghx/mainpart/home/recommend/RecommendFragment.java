@@ -7,12 +7,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.orhanobut.logger.Logger;
-
 import javax.inject.Inject;
 
 import example.com.ghx.base.BaseViewPagerFragment;
 import example.com.ghx.R;
+import example.com.ghx.entity.RecommendInfo;
 
 /**
  * 首页推荐Fragment
@@ -34,6 +33,18 @@ public class RecommendFragment extends BaseViewPagerFragment
         super.onCreateView(inflater,container,savedInstanceState);
         View view=inflater.inflate(R.layout.fragment_one,container,false);
         return view;
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        mPresenter.addView(this);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        mPresenter.removeView();
     }
 
     @Override
@@ -59,11 +70,12 @@ public class RecommendFragment extends BaseViewPagerFragment
     @Override
     protected void lazyLoadRemoteData() {
         showToast("无缓存，请求网络数据");
+        mPresenter.getRecommendFromRemote();
     }
 
     @Override
-    public void refreshList() {
-
+    public void updateList(RecommendInfo recommendInfo) {
+        showToast("刷新列表数据");
     }
 
     @Override

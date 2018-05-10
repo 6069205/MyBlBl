@@ -30,6 +30,8 @@ public class MyApplication extends DaggerApplication {
         //TODO 貌似说Application的onCreate中，初始化操作也不宜过多，否
                //则会影响启动速度，不一定全在这里做初始化。目前初始化操作还少，无所谓.
                //而且还要具体看这些初始化操作，是不是很耗时.
+			   
+        //TODO 若用友盟最新的包，还要在这里做个初始化UMConfigure.init(this, null, null, UMConfigure.DEVICE_TYPE_PHONE, null);		
         //推送设置
         initPush();
         //日志框架初始化

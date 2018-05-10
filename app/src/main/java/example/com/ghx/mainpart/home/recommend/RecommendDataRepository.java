@@ -1,9 +1,11 @@
 package example.com.ghx.mainpart.home.recommend;
 
+import android.support.annotation.Nullable;
+
 import javax.inject.Inject;
 
 import example.com.ghx.DataCallback;
-import example.com.ghx.entity.HomeRecommendInfo;
+import example.com.ghx.entity.RecommendInfo;
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
@@ -12,6 +14,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Function;
+import io.reactivex.observers.DisposableObserver;
 import io.reactivex.schedulers.Schedulers;
 
 /**
@@ -21,6 +24,11 @@ import io.reactivex.schedulers.Schedulers;
  */
 public class RecommendDataRepository {
 
+    /**
+     * 主页推荐信息缓存
+     */
+    private RecommendInfo mRecommendInfo=null;
+
     @Inject
     public RecommendDataRepository(){}
 
@@ -28,7 +36,8 @@ public class RecommendDataRepository {
      * 从网络获取推荐信息
      * @return
      */
-    public HomeRecommendInfo getRecommendInfoFromRemote(DataCallback<HomeRecommendInfo> callBack) {
+    public void getRecommendFromRemote(DataCallback<RecommendInfo> callBack) {
+        //TODO 还要考虑要不要加http缓存
         //TODO 网络请求回调，重新赋值mHomeRecommendInfo，并调用执行自己操作的回调接口
         Observable<Object> o1=Observable.create(new ObservableOnSubscribe<Object>() {
             @Override
@@ -69,6 +78,19 @@ public class RecommendDataRepository {
             }
         });
 
-        return null;
+        //Observer继承DisposableObserver
     }
+
+    /**
+     * 获取缓存的推荐信息(注意这里并不是从单例获取缓存)
+     * @return
+     */
+    public @Nullable RecommendInfo getRecommendFromCache() {
+        return mRecommendInfo;
+    }
+
+    /*public void getRecommendInfoFromDisk
+    可以像官方demo那样进行3层缓存的抽象，有需要再来改*/
+
+    /*至于是要取缓存，还是从网络请求，由p层控制*/
 }

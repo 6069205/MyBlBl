@@ -1,7 +1,10 @@
 package example.com.ghx.mainpart.home.recommend;
 
 import javax.inject.Inject;
-import example.com.ghx.entity.HomeRecommendInfo;
+
+import example.com.ghx.DataCallback;
+import example.com.ghx.entity.RecommendInfo;
+import io.reactivex.annotations.NonNull;
 
 /**
  * @author gaohx
@@ -9,11 +12,6 @@ import example.com.ghx.entity.HomeRecommendInfo;
  */
 
 public class RecommendPresenter implements RecommendContract.Presenter{
-
-    /**
-     * 主页推荐信息
-     */
-    private HomeRecommendInfo mHomeRecommendInfo;
 
     RecommendContract.View mView;
 
@@ -25,8 +23,26 @@ public class RecommendPresenter implements RecommendContract.Presenter{
     }
 
     @Override
-    public void getList() {
+    public void getRecommendFromRemote() {
+        mDataRepository.getRecommendFromRemote(
+                new DataCallback<RecommendInfo>() {
+            @Override
+            public void onDataAvailable(RecommendInfo recommendInfo) {
+                //获取到主页推荐信息后，更新页面列表
+                mView.updateList(recommendInfo);
+            }
 
+            @Override
+            public void onDataNotAvailable(Throwable e) {
+                //暂时简单写个提示
+                mView.showMessage("请求主页推荐信息失败");
+            }
+        });
+    }
+
+    @Override
+    public RecommendInfo getRecommendFromCache() {
+        return mDataRepository.getRecommendFromCache();
     }
 
     @Override

@@ -7,7 +7,7 @@ import java.util.List;
  * @author gaohx
  * @date 2017/12/19
  */
-public class HomeRecommendInfo {
+public class RecommendInfo {
     /**
      * code : 0
      * result : [{"type":"recommend","head":{"param":"","goto":"","style":"gm_av","title":"热门焦点"},"body":[{"title":"【灯泡】弹丸论破-绝望异世界-第一章（非日常篇上）","style":"gm_av","cover":"http://i0.hdslb.com/bfs/archive/6785972c28e662bafd8f90be97111eb889f584c7.jpg","param":"15737645","goto":"av","width":350,"height":219,"play":"14.1万","danmaku":"3446","up":"大大大灯泡"}]}]
